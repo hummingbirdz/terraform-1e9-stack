@@ -1,2 +1,2 @@
-# terraform-1e9-modules
+# terraform-1e9-stack
 
