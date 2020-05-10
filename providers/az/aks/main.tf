@@ -13,5 +13,7 @@ module "aks" {
   client_id           = var.service_principal_client_id
   client_secret       = var.service_principal_client_secret
   prefix              = var.aks_prefix
+  agents_size         = var.agents_size
+  agents_count        = var.agents_count
 }
 
