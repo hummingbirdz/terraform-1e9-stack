@@ -8,7 +8,8 @@ resource "azurerm_resource_group" "rg" {
 }
 
 module "aks" {
-  source              = "Azure/aks/azurerm"
+  //source            = "Azure/aks/azurerm"
+  source              = "github.com/lukekhamilton/terraform-azurerm-aks"
   resource_group_name = azurerm_resource_group.rg.name
   client_id           = var.service_principal_client_id
   client_secret       = var.service_principal_client_secret
