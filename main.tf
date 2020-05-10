@@ -1,3 +1,13 @@
+terraform {
+  backend "remote" {
+    hostname     = var.backend_remote_hostname
+    organization = var.backend_remote_organization
+    workspaces {
+      name = var.backend_remote_workspace_name
+    }
+  }
+}
+
 module "aks" {
   source = "./providers/az/aks"
   aks_prefix = var.az_aks_prefix
