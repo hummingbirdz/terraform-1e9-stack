@@ -1,12 +1,12 @@
 stages:
-  - tag
+  - version
 
 cache:
   paths:
     - node_modules/
 
-semantic_release:
-  stage: tag
+version:
+  stage: version
   image: node:latest
   variables:
     GITLAB_TOKEN: $GITLAB_TOKEN
