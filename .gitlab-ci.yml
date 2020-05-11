@@ -31,5 +31,3 @@ version:
   only:
     - master
 
-image:
-  name: hashicorp/terraform:light
