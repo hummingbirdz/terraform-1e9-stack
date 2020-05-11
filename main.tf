@@ -26,7 +26,6 @@ resource "kubernetes_secret" "image_pull_secrets" {
   data = {
     ".dockercfg" = jsonencode({
       "registry.gitlab.com" = {
-        email    = var.gitlab_email
         username = var.gitlab_username
         password = var.gitlab_password
       }
