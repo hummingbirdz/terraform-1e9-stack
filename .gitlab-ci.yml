@@ -1,12 +1,26 @@
 stages:
+  - validate
   - version
 
-cache:
-  paths:
-    - node_modules/
+validate:
+  stage: validate
+  image:
+    name: hashicorp/terraform:light
+  cache:
+    key: "$CI_COMMIT_SHA"
+    paths:
+      - .terraform
+  script:
+    - terraform validate
+    - terraform fmt -check=true
+  only:
+    - branches
 
 version:
   stage: version
+  cache:
+    paths:
+      - node_modules/
   image: node:latest
   variables:
     GITLAB_TOKEN: $GITLAB_TOKEN
@@ -16,3 +30,6 @@ version:
     - npx semantic-release
   only:
     - master
+
+image:
+  name: hashicorp/terraform:light
