@@ -7,10 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "semantic-release": "semantic-release"
   },
-  "repository": {
-    "type": "git",
-    "url": "https:git@gitlab.com:1e9.io/infrastructure/terraform-1e9-stack.git"
-  },
   "keywords": [
     "terraform",
     "modules",

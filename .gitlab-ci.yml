@@ -13,6 +13,6 @@ semantic_release:
   before_script:
     - npm install
   script:
-    - semantic-release -e @semantic-release/gitlab-config
+    - npx semantic-release
   only:
     - master
