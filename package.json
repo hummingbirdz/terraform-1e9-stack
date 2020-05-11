@@ -17,8 +17,10 @@
     "k8s"
   ],
   "author": "Luke Hamilton",
-  "license": "TBA",
+  "license": "",
   "devDependencies": {
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/gitlab-config": "^8.0.0",
     "semantic-release": "^17.0.7"
   }
 }
