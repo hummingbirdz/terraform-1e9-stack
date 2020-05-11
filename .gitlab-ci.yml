@@ -13,6 +13,8 @@ validate:
     key: "$CI_COMMIT_SHA"
     paths:
       - .terraform
+  before_script:
+    - terraform init
   script:
     - terraform validate
     - terraform fmt -check=true
