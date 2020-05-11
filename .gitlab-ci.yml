@@ -11,7 +11,7 @@ semantic_release:
   variables:
     GITLAB_TOKEN: $GITLAB_TOKEN
   before_script:
-    - npm install -g semantic-release @semantic-release/gitlab-config
+    - npm install
   script:
     - semantic-release -e @semantic-release/gitlab-config
   only:
