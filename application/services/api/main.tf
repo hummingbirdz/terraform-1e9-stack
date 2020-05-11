@@ -26,7 +26,7 @@ resource "kubernetes_deployment" "api" {
         }
         container {
           name = "api"
-          image = var.image_registry
+          image = var.image_registry_url
           image_pull_policy = "Always"
           port {
             container_port = var.pod_port

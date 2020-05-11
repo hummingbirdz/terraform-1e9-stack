@@ -8,3 +8,11 @@ module "aks" {
   agents_size = var.az_aks_node_pool_vm_size
   agents_count = var.az_aks_node_count
 }
+
+module "api" {
+  source = "./application/services/api"
+  image_pull_secrets = var.image_pull_secrets
+  image_registry_url = var.api_image_registry_url
+  pod_port = var.api_pod_port
+  replicas = var.api_pod_replicas
+}
