@@ -11,3 +11,7 @@ variable "az_aks_node_count" {
   description = "Number of nodes in the cluster"
   default = 1
 }
+variable "image_pull_secrets" {}
+variable "api_image_registry_url" {}
+variable "api_pod_port" {}
+variable "api_pod_replicas" {}
