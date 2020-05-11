@@ -17,7 +17,6 @@ validate:
     - terraform init
   script:
     - terraform validate
-    - terraform fmt -check=true
   only:
     - branches
 
