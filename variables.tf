@@ -15,3 +15,6 @@ variable "image_pull_secrets" {}
 variable "api_image_registry_url" {}
 variable "api_pod_port" {}
 variable "api_pod_replicas" {}
+variable "gitlab_email" {}
+variable "gitlab_username" {}
+variable "gitlab_password" {}
