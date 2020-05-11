@@ -12,7 +12,6 @@ validate:
       - .terraform
   script:
     - terraform validate
-    - terraform fmt -check=true
   only:
     - branches
 
