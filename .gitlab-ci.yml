@@ -6,12 +6,16 @@ validate:
   stage: validate
   image:
     name: hashicorp/terraform:light
+    entrypoint:
+      - '/usr/bin/env'
+      - 'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
   cache:
     key: "$CI_COMMIT_SHA"
     paths:
       - .terraform
   script:
     - terraform validate
+    - terraform fmt -check=true
   only:
     - branches
 
