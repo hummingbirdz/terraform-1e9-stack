@@ -1,6 +1,10 @@
 stages:
   - tag
 
+cache:
+  paths:
+    - node_modules/
+
 semantic_release:
   stage: tag
   image: node:latest
