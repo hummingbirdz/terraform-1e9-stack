@@ -16,3 +16,6 @@ variable "api_pod_port" {}
 variable "api_pod_replicas" {}
 variable "gitlab_username" {}
 variable "gitlab_password" {}
+variable "frontend_image_registry_url" {}
+variable "frontend_pod_port" {}
+variable "frontend_replicas" {}

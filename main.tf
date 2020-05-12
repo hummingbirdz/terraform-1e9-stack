@@ -42,3 +42,11 @@ module "api" {
   pod_port = var.api_pod_port
   replicas = var.api_pod_replicas
 }
+
+module "frontend" {
+  source = "./application/services/frontend"
+  image_pull_secrets = kubernetes_secret.image_pull_secrets.metadata.0.name
+  image_registry = var.frontend_image_registry_url
+  pod_port = var.frontend_pod_port
+  replicas = var.frontend_replicas
+}
